@@ -54,6 +54,9 @@ Download this artifact
 
 ```shell
 git clone https://github.com/mlzoo/CDK-API-Gateway-Lambda-Python.git
+
+
+cd CDK-API-Gateway-Lambda-Python
 ```
 
 In the root path of this artifact, install needed python modules:
