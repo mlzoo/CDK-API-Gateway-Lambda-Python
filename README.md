@@ -27,7 +27,6 @@ Edit `/etc/profile` to add following line at the end of txt
 export PATH=/usr/local/lib/nodejs/node-v16.13.1-linux-x64/bin:$PATH
 ```
 
-Run `source /etc/profile`
 
 Edit `/etc/sudoers` to add following content to the `secure_path` variable
 
@@ -42,6 +41,8 @@ Logout and then login again, and then install CDK
 
 
 ```shell
+source /etc/profile
+
 sudo npm install -g aws-cdk
 
 cdk --version
