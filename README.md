@@ -82,3 +82,24 @@ The output will be
 
 Outputs:
 ApigatewayLambdaStack.WidgetsmlapiEndpoint79472A20 = https://xxx.execute-api.us-east-1.amazonaws.com/prod/
+
+
+## 3 China region
+
+The EDGE mode is not supported in China region, so if you are using this CDK template in China region, please change file `apigateway_lambda/ml_service.py` from
+
+
+```python
+        api = apigateway.RestApi(self, "ml-api",
+                  rest_api_name="Machine Learning API",
+                  description="This service serves ML endpoint")
+```
+
+to
+
+```python
+        api = apigateway.RestApi(self, "ml-api",
+            rest_api_name="Machine Learning API-v1",
+            description="This service serves ML endpoint",
+            endpoint_types=[apigateway.EndpointType.REGIONAL],)
+```
