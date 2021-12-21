@@ -38,7 +38,13 @@ Edit `/etc/sudoers` to add following content to the `secure_path` variable
 
 Logout and then login again, and then install CDK
 
+Append following code in  `~/.bashrc`
 
+```
+source /etc/profile
+```
+
+Run
 
 ```shell
 source /etc/profile
